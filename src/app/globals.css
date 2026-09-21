@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --surface-1: #fcfcfb;
+  --page: #f9f9f7;
+  --ink-1: #0b0b0b;
+  --ink-2: #52514e;
+  --ink-muted: #898781;
+  --grid: #e1e0d9;
+  --delta-good: #006300;
+  --status-critical: #d03b3b;
+  --status-warning: #fab219;
+}
+
+body {
+  @apply antialiased;
+  background: var(--page);
+  color: var(--ink-1);
+}
+
+.table-scroll {
+  max-height: 70vh;
+  overflow: auto;
+}
+.table-scroll thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 1px 0 var(--grid);
+}
+
+.btn-primary {
+  @apply rounded bg-slate-900 px-3 py-1.5 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-40;
+}
+.btn-ghost {
+  @apply rounded px-2 py-1 text-sm underline-offset-2 hover:underline;
+}
+.select {
+  @apply rounded border bg-white px-2 py-1.5 text-sm;
+  border-color: var(--grid);
+}
